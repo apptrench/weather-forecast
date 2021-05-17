@@ -23,7 +23,6 @@ describe("Test Request validations ", () => {
   it("should return successful response for valid city and orderBy", async () => {
     await request(app)
       .get('/forecast?city=Bangalore&orderBy=asc')
-      .set('Accept', 'application/json')
       .expect(200)
   })
 });
