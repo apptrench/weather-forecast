@@ -1,5 +1,4 @@
 const request = require('supertest');
-// const express = require('express');
 const app = require('../app')
 
 describe("Test Request validations ", () => {
@@ -25,11 +24,6 @@ describe("Test Request validations ", () => {
     await request(app)
       .get('/forecast?city=Bangalore&orderBy=asc')
       .set('Accept', 'application/json')
-      .expect(200) //TODO - Should I check the response?
-      // .then(response => {
-      //   console.log(response.body)
-      //
-      //   // expect(response.text).toContain('\"orderBy\" must be one of [asc, desc].')
-      // });
+      .expect(200)
   })
 });
